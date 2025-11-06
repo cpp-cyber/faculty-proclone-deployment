@@ -22,6 +22,13 @@ spec:
           volumeMounts:
             - name: uploads
               mountPath: /app/uploads
+          env:
+            - name: REDIS_ADDR
+              value: "redis-master.default.svc.cluster.local:6379"
+            - name: REDIS_PASSWORD
+              value: ""
+            - name: STORAGE_ID
+              value: "[your shared storage ID]"
           envFrom:
             - secretRef:
                 name: proclone-secrets
