@@ -16,9 +16,6 @@ spec:
     spec:
       containers:
         - name: pc-front
-          image: docker.io/valorouskarma/proclone-frontend:latest
+          image: ghcr.io/cpp-cyber/faculty-kamino-frontend:development
           ports:
             - containerPort: 80
-          envFrom:
-            - secretRef:
-                name: proclone-frontend-secrets
